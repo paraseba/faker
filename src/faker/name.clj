@@ -1,20 +1,19 @@
 (ns faker.name
   (:use 
-     (clojure.contrib [seq :only (rand-elt)]
-                      [string :only (join)])
+     (clojure.contrib [string :only (join)])
      faker.name-data))
 
 (defn rand-first []
-  (rand-elt first-names))
+  (rand-nth first-names))
 
 (defn rand-last []
-  (rand-elt last-names))
+  (rand-nth last-names))
 
 (defn rand-pre []
-  (rand-elt prefixes))
+  (rand-nth prefixes))
 
 (defn rand-suf []
-  (rand-elt suffixes))
+  (rand-nth suffixes))
 
 (defn- comb [& funs]
   (fn [] (join " " (map #(%) funs))))

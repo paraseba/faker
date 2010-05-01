@@ -1,4 +1,4 @@
-(ns test.faker.core-test
+(ns faker.core-test
   (:use [faker.name] :reload-all)
   (:use [clojure.test]
      [clojure.contrib.string :only (split)]))
