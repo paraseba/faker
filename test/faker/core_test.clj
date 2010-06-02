@@ -1,5 +1,6 @@
 (ns faker.core-test
   (:use (faker name lorem phone-number))
+  (:require [faker.company :as company])
   (:use
      clojure.test
      [clojure.contrib.string :only (split)]))
@@ -21,3 +22,9 @@
 
 (deftest test-phone-numbers
   (is (take 10 (phone-numbers))))
+
+(deftest test-company
+  (is (company/suffix))
+  (is (company/catch-phrase))
+  (is (company/bs))
+  (is (take 10 (company/names))))
