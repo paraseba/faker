@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <title>faker - Overview</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">faker</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <a class="wiki_link" href="index.html">Overview</a><br />
+    <a class="wiki_link" href="api-index.html">API Index</a><br />
+    <a class="wiki_link" href="#">Namespaces:</a>
+    <ul id="left-sidebar-list">
+      <li><a href="faker.address-api.html" class="wiki_link">faker.address</a></li><li><a href="faker.address-data-api.html" class="wiki_link">faker.address-data</a></li><li><a href="faker.company-api.html" class="wiki_link">faker.company</a></li><li><a href="faker.company-data-api.html" class="wiki_link">faker.company-data</a></li><li><a href="faker.internet-api.html" class="wiki_link">faker.internet</a></li><li><a href="faker.lorem-api.html" class="wiki_link">faker.lorem</a></li><li><a href="faker.lorem-data-api.html" class="wiki_link">faker.lorem-data</a></li><li><a href="faker.name-api.html" class="wiki_link">faker.name</a></li><li><a href="faker.name-data-api.html" class="wiki_link">faker.name-data</a></li><li><a href="faker.phone-number-api.html" class="wiki_link">faker.phone-number</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.address">faker.address</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.address-data">faker.address-data</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.company">faker.company</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.company-data">faker.company-data</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.internet">faker.internet</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.lorem">faker.lorem</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.lorem-data">faker.lorem-data</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.name">faker.name</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.name-data">faker.name-data</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#faker.phone-number">faker.phone-number</a>
+    
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="toc0">An Overview of the <span id="header-project">faker</span> API</h1>
+<br />
+<div id="project-description">Generate fake data, port of ruby faker</div>
+<br />
+<div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.address">faker.address</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.address-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr">Create fake address data.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="faker.address-api.html#faker.address/city-prefix" id="var-tag">city-prefix</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/city-suffix" id="var-tag">city-suffix</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/street-address" id="var-tag">street-address</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/street-suffix" id="var-tag">street-suffix</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/uk-country" id="var-tag">uk-country</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/uk-county" id="var-tag">uk-county</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/uk-postcode" id="var-tag">uk-postcode</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/us-state" id="var-tag">us-state</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/us-state-abbr" id="var-tag">us-state-abbr</a> </span><span id="var-link"><a href="faker.address-api.html#faker.address/zip-code" id="var-tag">zip-code</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.address-data">faker.address-data</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.address-data-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
+  
+  Public variables and functions:
+  <br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.company">faker.company</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.company-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr">Create fake company data</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="faker.company-api.html#faker.company/bs" id="var-tag">bs</a> </span><span id="var-link"><a href="faker.company-api.html#faker.company/catch-phrase" id="var-tag">catch-phrase</a> </span><span id="var-link"><a href="faker.company-api.html#faker.company/suffix" id="var-tag">suffix</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.company-data">faker.company-data</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.company-data-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
+  
+  Public variables and functions:
+  <br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.internet">faker.internet</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.internet-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr">Generate fake domains and emails.</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="faker.internet-api.html#faker.internet/domain-name" id="var-tag">domain-name</a> </span><span id="var-link"><a href="faker.internet-api.html#faker.internet/domain-suffix" id="var-tag">domain-suffix</a> </span><span id="var-link"><a href="faker.internet-api.html#faker.internet/domain-word" id="var-tag">domain-word</a> </span><span id="var-link"><a href="faker.internet-api.html#faker.internet/email" id="var-tag">email</a> </span><span id="var-link"><a href="faker.internet-api.html#faker.internet/emails" id="var-tag">emails</a> </span><span id="var-link"><a href="faker.internet-api.html#faker.internet/free-email" id="var-tag">free-email</a> </span><span id="var-link"><a href="faker.internet-api.html#faker.internet/user-name" id="var-tag">user-name</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.lorem">faker.lorem</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.lorem-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr">Create fake textual data</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="faker.lorem-api.html#faker.lorem/paragraphs" id="var-tag">paragraphs</a> </span><span id="var-link"><a href="faker.lorem-api.html#faker.lorem/sentences" id="var-tag">sentences</a> </span><span id="var-link"><a href="faker.lorem-api.html#faker.lorem/words" id="var-tag">words</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.lorem-data">faker.lorem-data</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.lorem-data-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
+  
+  Public variables and functions:
+  <br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name">faker.name</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.name-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr">Create fake data for person names</pre>
+  
+  Public variables and functions:
+  <span id="var-link"><a href="faker.name-api.html#faker.name/first-name" id="var-tag">first-name</a> </span><span id="var-link"><a href="faker.name-api.html#faker.name/last-name" id="var-tag">last-name</a> </span><span id="var-link"><a href="faker.name-api.html#faker.name/names" id="var-tag">names</a> </span><span id="var-link"><a href="faker.name-api.html#faker.name/prefix" id="var-tag">prefix</a> </span><span id="var-link"><a href="faker.name-api.html#faker.name/suffix" id="var-tag">suffix</a> </span><br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name-data">faker.name-data</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.name-data-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
+  
+  Public variables and functions:
+  <br />
+  
+</div><div id="namespace-entry">
+  <br />
+  <hr />
+  <h2 id="faker.phone-number">faker.phone-number</h2>
+  by <span id="author">unknown author</span><br />
+  <a href="faker.phone-number-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr">Generate fake phone numbers.</pre>
+  
+  Public variables and functions:
+  <br />
+  
+</div>
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>

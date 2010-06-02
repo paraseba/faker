@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title>faker.name API reference (faker)</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">faker</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <a class="wiki_link" href="index.html">Overview</a><br />
+    <a class="wiki_link" href="api-index.html">API Index</a><br />
+    <a class="wiki_link" href="#">Namespaces:</a>
+    <ul id="left-sidebar-list">
+      <li><a href="faker.address-api.html" class="wiki_link">faker.address</a></li><li><a href="faker.address-data-api.html" class="wiki_link">faker.address-data</a></li><li><a href="faker.company-api.html" class="wiki_link">faker.company</a></li><li><a href="faker.company-data-api.html" class="wiki_link">faker.company-data</a></li><li><a href="faker.internet-api.html" class="wiki_link">faker.internet</a></li><li><a href="faker.lorem-api.html" class="wiki_link">faker.lorem</a></li><li><a href="faker.lorem-data-api.html" class="wiki_link">faker.lorem-data</a></li><li><a href="faker.name-api.html" class="wiki_link">faker.name</a></li><li><a href="faker.name-data-api.html" class="wiki_link">faker.name-data</a></li><li><a href="faker.phone-number-api.html" class="wiki_link">faker.phone-number</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#faker.name/first-name">first-name</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#faker.name/last-name">last-name</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#faker.name/names">names</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#faker.name/prefix">prefix</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#faker.name/suffix">suffix</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">faker.name</span></h1>
+by <span id="author">Unknown</span><br />
+<br />Usage:
+<pre>
+(ns your-namespace
+  (:require <span id="long-name">faker.name</span>))
+</pre><pre>
+</pre><h2>Overview</h2>
+<pre id="namespace-docstr">Create fake data for person names</pre>
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name/first-name">first-name</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (first-name)
+</pre>
+  <pre id="var-docstr">Create a fake person first name</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name/last-name">last-name</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (last-name)
+</pre>
+  <pre id="var-docstr">Create a fake person last name</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name/names">names</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (names)
+</pre>
+  <pre id="var-docstr">Lazy sequence of random names</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name/prefix">prefix</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (prefix)
+</pre>
+  <pre id="var-docstr">Create a fake person prefix, like in Mr., Mrs., etc.</pre>
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="faker.name/suffix">suffix</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (suffix)
+</pre>
+  <pre id="var-docstr">Create a fake person suffix, like in Jr., Sr., etc.</pre>
+  
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
