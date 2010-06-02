@@ -3,7 +3,7 @@
 Faker is a port of [Ruby Faker library](http://faker.rubyforge.org/) to the
 clojure programming language.
 
-It is useful when you want to generate fake but good looking data, such as in
+It is useful when you want to generate fake but good-looking data, such as in
 test scenarios or staging servers.
 
 ## Installation
