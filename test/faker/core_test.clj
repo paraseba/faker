@@ -1,5 +1,5 @@
 (ns faker.core-test
-  (:use (faker name lorem phone-number internet))
+  (:use (faker name lorem phone-number internet address))
   (:require [faker.company :as company])
   (:use
      clojure.test
@@ -38,3 +38,17 @@
   (is (free-email))
   (is (take 10 emails)))
 
+(deftest test-address
+  (is (zip-code))
+  (is (us-state))
+  (is (us-state-abbr))
+  (is (city-prefix))
+  (is (city-suffix))
+  (is (street-suffix))
+  (is (city))
+  (is (street-name))
+  (is (secondary-address))
+  (is (street-address))
+  (is (uk-county))
+  (is (uk-country))
+  (is (uk-postcode)))
