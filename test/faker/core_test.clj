@@ -1,5 +1,5 @@
 (ns faker.core-test
-  (:use (faker name lorem))
+  (:use (faker name lorem phone-number))
   (:use
      clojure.test
      [clojure.contrib.string :only (split)]))
@@ -15,7 +15,9 @@
     (is (and (> count-simple 7000) (< count-simple 9000)))))
 
 (deftest test-lorem-generation
-  (is (take 10 words))
-  (is (take 10 sentences))
-  (is (take 10 paragraphs)))
+  (is (take 10 (words)))
+  (is (take 10 (sentences)))
+  (is (take 10 (paragraphs))))
 
+(deftest test-phone-numbers
+  (is (take 10 (phone-numbers))))
