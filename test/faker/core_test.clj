@@ -1,5 +1,5 @@
 (ns faker.core-test
-  (:use (faker name lorem phone-number))
+  (:use (faker name lorem phone-number internet))
   (:require [faker.company :as company])
   (:use
      clojure.test
@@ -28,3 +28,13 @@
   (is (company/catch-phrase))
   (is (company/bs))
   (is (take 10 (company/names))))
+
+(deftest test-internet
+  (is (domain-suffix))
+  (is (domain-name))
+  (is (domain-word))
+  (is (user-name))
+  (is (email))
+  (is (free-email))
+  (is (take 10 emails)))
+
