@@ -52,3 +52,15 @@
   (is (uk-county))
   (is (uk-country))
   (is (uk-postcode)))
+
+(deftest results-different-by-default
+  (is (not (= (take 10 (names))
+	      (take 10 (names))))))
+
+(deftest results-repeatable
+  (faker.repeatable/reseed 12345)
+  (let [first-run (doall (take 10 (names)))]
+    (faker.repeatable/reseed 12345)
+    (let [second-run (doall (take 10 (names)))]
+      (is (= first-run second-run)))))
+

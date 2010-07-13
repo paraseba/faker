@@ -1,7 +1,8 @@
 (ns faker.internet
   (:use
      [clojure.contrib.def :only (defvar-)]
-     [clojure.contrib.string :only (join split replace-re lower-case)])
+     [clojure.contrib.string :only (join split replace-re lower-case)]
+     faker.repeatable)
   (:require
      [faker.company :as co]
      [faker.name :as na]))
@@ -9,7 +10,7 @@
 (defvar- suffixes ["co.uk" "com" "us" "uk" "ca" "biz" "info" "name"])
 
 (defn domain-suffix []
-  (rand-nth suffixes))
+  (repeatable-rand-nth suffixes))
 
 (defn domain-word []
   (->> (first (co/names))
@@ -26,7 +27,7 @@
 
 (defvar- formats
   [#(lower-case (clean (na/first-name)))
-   #(lower-case (join (rand-nth ["." "-"])
+   #(lower-case (join (repeatable-rand-nth ["." "-"])
                       [(clean (na/first-name))
                        (clean (na/last-name))]))])
 
@@ -35,10 +36,10 @@
    (->> name
         (split #"\W+")
         shuffle
-        (join (rand-nth ["." "-"]))
+        (join (repeatable-rand-nth ["." "-"]))
         lower-case))
 
-  ([] ((rand-nth formats))))
+  ([] ((repeatable-rand-nth formats))))
 
 (defn email
   ([] (str (user-name) "@" (domain-name)))
@@ -48,10 +49,10 @@
   ["gmail.com" "yahoo.com" "hotmail.com"])
 
 (defn free-email
-  ([] (str (user-name) "@" (rand-nth free-domains)))
-  ([name] (str (user-name name) "@" (rand-nth free-domains))))
+  ([] (str (user-name) "@" (repeatable-rand-nth free-domains)))
+  ([name] (str (user-name name) "@" (repeatable-rand-nth free-domains))))
 
 (defn emails []
   (repeatedly
     (fn []
-      ((rand-nth [free-email email])))))
+      ((repeatable-rand-nth [free-email email])))))

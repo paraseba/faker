@@ -2,20 +2,21 @@
   (:use 
      (clojure.contrib
        [string :only (join)]
-       [def :only (defvar-)])
-     faker.name-data))
+       [def :only (defvar-)])     
+     faker.name-data
+     faker.repeatable))
 
 (defn first-name []
-  (rand-nth first-names))
+  (repeatable-rand-nth first-names))
 
 (defn last-name []
-  (rand-nth last-names))
+  (repeatable-rand-nth last-names))
 
 (defn prefix []
-  (rand-nth prefixes))
+  (repeatable-rand-nth prefixes))
 
 (defn suffix []
-  (rand-nth suffixes))
+  (repeatable-rand-nth suffixes))
 
 (defn- comb [& funs]
   (fn [] (join " " (map #(%) funs))))
@@ -26,7 +27,7 @@
    [(comb first-name last-name) 1]])
 
 (defn- one-name []
-  (let [p (rand)]
+  (let [p (repeatable-rand)]
     (some #(and (> (last %) p)
                 ((first %)))
           format-probs)))

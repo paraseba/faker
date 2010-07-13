@@ -2,14 +2,15 @@
   (:use
      [clojure.contrib.string :only (join)]
      [clojure.contrib.def :only (defvar-)]
-     faker.company-data)
+     faker.company-data
+     faker.repeatable)
   (:require [faker.name :as fkname]))
 
 (defn suffix []
-  (rand-nth suffixes))
+  (repeatable-rand-nth suffixes))
 
 (defn- phrase [source]
-  (join " " (map #(rand-nth %) source)))
+  (join " " (map #(repeatable-rand-nth %) source)))
 
 (defn catch-phrase []
   (phrase catch-phrase-words))
@@ -26,4 +27,4 @@
 (defn names []
   (repeatedly
     (fn []
-      ((rand-nth formats)))))
+      ((repeatable-rand-nth formats)))))

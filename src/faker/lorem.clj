@@ -1,10 +1,11 @@
 (ns faker.lorem
   (:use 
      [clojure.contrib.string :only (join capitalize)]
-     faker.lorem-data))
+     faker.lorem-data
+     faker.repeatable))
 
 (defn words []
-  (repeatedly #(rand-nth latin-words)))
+  (repeatedly #(repeatable-rand-nth latin-words)))
 
 (defn sentences
   ([] (sentences 4))

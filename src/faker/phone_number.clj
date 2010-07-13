@@ -1,6 +1,7 @@
 (ns faker.phone-number
   (:use (clojure.contrib [def :only (defvar-)]
-                         [string :only (replace-by)])))
+                         [string :only (replace-by)])
+	faker.repeatable))
 
 (defvar- formats
   ["###-###-####",
@@ -29,5 +30,5 @@
     (fn []
       (replace-by #"#"
                   (fn [_] (str (rand-int 10)))
-                  (rand-nth formats)))))
+                  (repeatable-rand-nth formats)))))
 
