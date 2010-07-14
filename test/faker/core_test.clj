@@ -53,14 +53,23 @@
   (is (uk-country))
   (is (uk-postcode)))
 
-(deftest results-different-by-default
-  (is (not (= (take 10 (names))
-	      (take 10 (names))))))
 
-(deftest results-repeatable
-  (faker.repeatable/reseed 12345)
-  (let [first-run (doall (take 10 (names)))]
-    (faker.repeatable/reseed 12345)
-    (let [second-run (doall (take 10 (names)))]
-      (is (= first-run second-run)))))
+(let [functions-to-test [company/names emails paragraphs phone-numbers sentences words]]
 
+  (deftest all-fake-data-not-repeatable-by-default
+    (doall
+     (for [f functions-to-test]
+       (is (not (= (doall (take 10 (f))) (doall (take 10 (f)))))))))
+  
+  (deftest all-fake-data-repeatable-if-seed-set
+    (doall
+     (for [f functions-to-test]
+       (do
+	 (faker.repeatable/reseed 123)
+	 (let [first-run (doall (take 10 (f)))]
+	   (faker.repeatable/reseed 123)
+	   (let [second-run (doall (take 10 (f)))]
+	     (is (= first-run second-run)))))))))
+      
+      
+	      

@@ -13,7 +13,7 @@
    (map
      (fn [n]
        (str (capitalize (join " " (take n (words)))) "."))
-     (repeatedly #(+ word-count (rand-int 6))))))
+     (repeatedly #(+ word-count (repeatable-rand-int 6))))))
 
 (defn paragraphs
   ([] (paragraphs 3))
@@ -21,5 +21,5 @@
    (map
      (fn [n]
        (join " " (take n (sentences))))
-     (repeatedly #(+ sentence-count (rand-int 3))))))
+     (repeatedly #(+ sentence-count (repeatable-rand-int 3))))))
 

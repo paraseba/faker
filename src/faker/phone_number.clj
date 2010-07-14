@@ -29,6 +29,6 @@
   (repeatedly
     (fn []
       (replace-by #"#"
-                  (fn [_] (str (rand-int 10)))
+                  (fn [_] (str (repeatable-rand-int 10)))
                   (repeatable-rand-nth formats)))))
 
