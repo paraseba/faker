@@ -1,4 +1,5 @@
 (ns faker.phone-number
+  "Generate fake phone numbers."
   (:use (clojure.contrib [def :only (defvar-)]
                          [string :only (replace-by)])
 	faker.repeatable))
@@ -26,6 +27,7 @@
    "###.###.#### x#####"])
 
 (defn phone-numbers []
+  "Lazy sequence of random phone numbers."
   (repeatedly
     (fn []
       (replace-by #"#"

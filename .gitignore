@@ -3,4 +3,4 @@
 /lib
 /classes
 *~
-
+/autodoc/**
