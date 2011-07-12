@@ -3,7 +3,7 @@
   (:require [faker.company :as company])
   (:use
      clojure.test
-     [clojure.contrib.string :only (split)]))
+     [clojure.string :only (split)]))
 
 (deftest test-name-generation
   (is (names))
@@ -11,7 +11,7 @@
   (is (last-name))
   (is (prefix))
   (is (suffix))
-  (let [many (map #(split #" " %) (take 10000 (names)))
+  (let [many (map #(split % #" ") (take 10000 (names)))
         count-simple (count (filter #(= 2 (count %)) many))]
     (is (and (> count-simple 7000) (< count-simple 9000)))))
 

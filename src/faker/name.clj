@@ -1,9 +1,7 @@
 (ns faker.name
   "Create fake data for person names"
-  (:use 
-     (clojure.contrib
-       [string :only (join)]
-       [def :only (defvar-)])
+  (:use
+     [clojure.string :only [join]]
      faker.name-data))
 
 (defn first-name
@@ -29,7 +27,7 @@
 (defn- comb [& funs]
   (fn [] (join " " (map #(%) funs))))
 
-(defvar- format-probs
+(def ^{:private true} format-probs
   [[(comb prefix first-name last-name) 0.1]
    [(comb first-name last-name suffix) 0.2]
    [(comb first-name last-name) 1]])
