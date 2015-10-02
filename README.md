@@ -33,3 +33,9 @@ There are several more namespaces for generating:
 
 Take a look at the documentation generated with autodoc
 [here](http://paraseba.github.com/faker)
+
+## License
+
+Source Copyright © 2010-2015 Sebastian Galkin. Distributed under the
+Eclipse Public License, the same as Clojure uses. See the file LICENSE.
+
