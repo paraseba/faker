@@ -15,7 +15,7 @@
   ([upper-bound]
    (price 0 upper-bound))
   ([lower-bound upper-bound]
-   {:pre (> upper-bound lower-bound)}
+   {:pre [(> upper-bound lower-bound)]}
    (let [diff (- upper-bound lower-bound)
          upper-with-dec (* 100 diff)
          picked (rand-int upper-with-dec)
