@@ -30,6 +30,7 @@ There are several more namespaces for generating:
 * Domains and emails
 * Telephone numbers
 * Text
+* Commerce
 
 Take a look at the documentation generated with autodoc
 [here](http://paraseba.github.com/faker)
