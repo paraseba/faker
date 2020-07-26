@@ -1,13 +1,12 @@
 (ns faker.lorem
   "Create fake textual data"
-  (:use
-     [clojure.string :only (join capitalize)]
-     faker.lorem-data))
+  (:require [clojure.string :refer [join capitalize]]
+            [faker.lorem-data :as ld]))
 
 (defn words
   "Lazy sequence of random latin words"
   []
-  (repeatedly #(rand-nth latin-words)))
+  (repeatedly #(rand-nth ld/latin-words)))
 
 (defn sentences
   "Lazy sequence of random latin sentences.
