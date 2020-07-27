@@ -1,7 +1,7 @@
 (ns faker.address
   "Create fake address data."
-  (:use faker.address-data)
   (:require [faker.name :as na]
+            [faker.address-data :as ad]
             [clojure.string :as string]))
 
 
@@ -19,27 +19,27 @@
 (defn us-state
   "Returns a random USA state."
   []
-  (rand-nth us-states))
+  (rand-nth ad/us-states))
 
 (defn us-state-abbr
   "Returns a random USA state abbreviation."
   []
-  (rand-nth us-state-abbrs))
+  (rand-nth ad/us-state-abbrs))
 
 (defn city-prefix
   "Returns a random city prefix, like North or South."
   []
-  (rand-nth city-prefixes))
+  (rand-nth ad/city-prefixes))
 
 (defn city-suffix
   "Returns a random city suffix, like town or land."
   []
-  (rand-nth city-suffixes))
+  (rand-nth ad/city-suffixes))
 
 (defn street-suffix
   "Returns a random street suffix, like Avenue or Bridge."
   []
-  (rand-nth street-suffixes))
+  (rand-nth ad/street-suffixes))
 
 (def ^{:private true} city-formats
   [#(format "%s %s%s" (city-prefix) (na/first-name) (city-suffix))
@@ -79,12 +79,12 @@
 (defn uk-county
   "Return a random UK county."
   []
-  (rand-nth uk-counties))
+  (rand-nth ad/uk-counties))
 
 (defn uk-country
   "Return a random UK country."
   []
-  (rand-nth uk-countries))
+  (rand-nth ad/uk-countries))
 
 (def ^{:private true} alphabet (seq "abcdefghijklmnopqrstuvwxyz"))
 
