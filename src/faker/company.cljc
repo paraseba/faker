@@ -25,7 +25,7 @@
 (def ^{:private true} formats
   [#(str (first (fkname/names)) " " (suffix))
    #(str (fkname/last-name) "-" (fkname/last-name))
-   #(format "%s, %s and %s" (fkname/last-name) (fkname/last-name) (fkname/last-name))])
+   #(str (fkname/last-name) ", " (fkname/last-name) " and " (fkname/last-name))])
 
 
 (defn names []
