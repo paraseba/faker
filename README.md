@@ -11,7 +11,7 @@ test scenarios or staging servers.
 The easiest way is to use Leiningen. Add the following dependency to your
 project.clj file:
 
-    [faker "0.2.2"]
+    [faker "0.3.2"]
 
 
 ## Usage
