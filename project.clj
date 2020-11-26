@@ -1,4 +1,4 @@
-(defproject faker "0.2.2"
+(defproject faker "0.3.2"
   :description "Generate fake data, port of ruby faker"
   :url "http://github.com/paraseba/faker"
   :license {:name "Eclipse Public License 1.0"
